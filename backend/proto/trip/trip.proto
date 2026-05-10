@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package trip;
+
+option go_package = "github.com/shemanto27/GoRideSharing/backend/proto/trip";
+
+service TripService {
+  rpc GetTrip(GetTripRequest) returns (GetTripResponse);
+}
+
+message GetTripRequest {
+  string trip_id = 1;
+}
+
+message GetTripResponse {
+  string trip_id = 1;
+  string status = 2;
+}
